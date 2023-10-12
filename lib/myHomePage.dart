@@ -1,6 +1,6 @@
 // lib/main.dart
 import 'package:flutter/material.dart';
-import 'package:futsal/Home%20Page/storePage.dart';
+import 'package:smartfutsal/Home%20Page/storePage.dart';
 import 'accountPage.dart';
 import 'homePage.dart';
 import 'court.dart';

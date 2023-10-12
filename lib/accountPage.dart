@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
-import 'package:futsal/profilePic.dart';
+import 'package:smartfutsal/profilePic.dart';
 
 class AccountPage extends StatelessWidget {
   @override

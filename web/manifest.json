@@ -1,6 +1,6 @@
 {
-    "name": "futsal",
-    "short_name": "futsal",
+    "name": "smartfutsal",
+    "short_name": "smartfutsal",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

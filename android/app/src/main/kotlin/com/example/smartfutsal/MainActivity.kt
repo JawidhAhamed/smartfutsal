@@ -1,4 +1,4 @@
-package com.example.futsal
+package com.example.smartfutsal
 
 import io.flutter.embedding.android.FlutterActivity
 

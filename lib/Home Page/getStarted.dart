@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
-import 'package:futsal/homePage.dart';
+import 'package:smartfutsal/homePage.dart';
 
 class getStarted extends StatelessWidget {
   const getStarted({super.key});

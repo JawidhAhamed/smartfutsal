@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:futsal/Home%20Page/getStarted.dart';
+import 'package:smartfutsal/Home%20Page/getStarted.dart';
 import 'dart:ui';
 import 'profilePic.dart';
-import 'package:futsal/profilePic.dart';
+import 'package:smartfutsal/profilePic.dart';
 
 class HomePage extends StatelessWidget {
   @override

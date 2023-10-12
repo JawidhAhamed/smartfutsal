@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "futsal" "\0"
+            VALUE "FileDescription", "smartfutsal" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "futsal" "\0"
+            VALUE "InternalName", "smartfutsal" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "futsal.exe" "\0"
-            VALUE "ProductName", "futsal" "\0"
+            VALUE "OriginalFilename", "smartfutsal.exe" "\0"
+            VALUE "ProductName", "smartfutsal" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

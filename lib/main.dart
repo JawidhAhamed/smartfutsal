@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:futsal/myHomePage.dart';
+import 'package:smartfutsal/myHomePage.dart';
 import 'package:device_preview/device_preview.dart';
 
 void main() {

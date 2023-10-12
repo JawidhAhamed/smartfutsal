@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:futsal/availableDate.dart';
+import 'package:smartfutsal/availableDate.dart';
 
 class Court extends StatelessWidget {
   @override
