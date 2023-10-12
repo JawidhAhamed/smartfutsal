@@ -1,9 +1,9 @@
 // lib/main.dart
 import 'package:flutter/material.dart';
 import 'package:smartfutsal/Home%20Page/storePage.dart';
+import 'package:smartfutsal/homescreen.dart';
 import 'accountPage.dart';
 import 'homePage.dart';
-import 'court.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -13,7 +13,12 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _currentIndex = 0;
 
-  final List<Widget> _pages = [HomePage(), Court(), AccountPage(), storePage()];
+  final List<Widget> _pages = [
+    HomePage(),
+    Homescreen(),
+    AccountPage(),
+    storePage()
+  ];
 
   void _onTabTapped(int index) {
     setState(() {
