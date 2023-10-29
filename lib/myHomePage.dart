@@ -31,12 +31,12 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color.fromARGB(255, 230, 0, 0),
+        backgroundColor: Colors.black,
         currentIndex: _currentIndex,
         onTap: _onTabTapped,
         selectedItemColor: const Color.fromARGB(
             255, 237, 213, 0), // Change the selected item color
-        unselectedItemColor: Colors.white,
+        unselectedItemColor: const Color.fromARGB(255, 0, 0, 0),
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),

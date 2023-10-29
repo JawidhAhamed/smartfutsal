@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smartfutsal/Home%20Page/getStarted.dart';
 import 'package:smartfutsal/myHomePage.dart';
 import 'package:device_preview/device_preview.dart';
 
@@ -24,35 +25,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-// class Futsal extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//         body: Container(
-//             color: Color.fromARGB(255, 6, 2, 23),
-//             width: 400,
-//             height: 900,
-//             child: Column(
-//                 mainAxisAlignment: MainAxisAlignment.center,
-//                 children: <Widget>[
-//                   Text('TIME TO GRAB YOUR TIME SLOT',
-//                       style: TextStyle(
-//                           color: Colors.white,
-//                           fontWeight: FontWeight.bold,
-//                           fontSize: 25)),
-//                   ElevatedButton(
-//                       child: const Text('BOOK NOW'),
-//                       onPressed: () {},
-//                       style: ElevatedButton.styleFrom(
-//                           shape: StadiumBorder(),
-//                           padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-//                           primary: Color.fromARGB(255, 194, 0, 0)
-//                           )
-//                           )
-//                 ]
-//                 )
-//                 )
-//                 );
-//   }
-// }
