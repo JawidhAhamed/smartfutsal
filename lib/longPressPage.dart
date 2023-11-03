@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:smartfutsal/availableDate.dart';
+import 'availableDate.dart';
 
 class longPressPage extends StatelessWidget {
   const longPressPage({super.key});
@@ -18,14 +20,20 @@ class longPressPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(height: 20),
-              ClipRRect(
-                borderRadius:
-                    BorderRadius.circular(20.0), // Adjust the radius as needed
-                child: Image.asset(
-                  'assets/cricket.jpg', // Replace with your image URL
-                  width: 250.0, // Adjust the width as needed
-                  height: 250.0, // Adjust the height as needed
-                  fit: BoxFit.cover, // Choose the appropriate BoxFit
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/date', (route) => false);
+                },
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(
+                      20.0), // Adjust the radius as needed
+                  child: Image.asset(
+                    'assets/cricket.jpg', // Replace with your image URL
+                    width: 250.0, // Adjust the width as needed
+                    height: 250.0, // Adjust the height as needed
+                    fit: BoxFit.cover, // Choose the appropriate BoxFit
+                  ),
                 ),
               ),
               const SizedBox(height: 20),
@@ -44,14 +52,20 @@ class longPressPage extends StatelessWidget {
               ),
 
               // Second Image
-              ClipRRect(
-                borderRadius:
-                    BorderRadius.circular(20.0), // Adjust the radius as needed
-                child: Image.asset(
-                  'assets/football.jpg', // Replace with your image URL
-                  width: 250.0, // Adjust the width as needed
-                  height: 250.0, // Adjust the height as needed
-                  fit: BoxFit.cover, // Choose the appropriate BoxFit
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/date', (route) => false);
+                },
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(
+                      20.0), // Adjust the radius as needed
+                  child: Image.asset(
+                    'assets/football.jpg', // Replace with your image URL
+                    width: 250.0, // Adjust the width as needed
+                    height: 250.0, // Adjust the height as needed
+                    fit: BoxFit.cover, // Choose the appropriate BoxFit
+                  ),
                 ),
               ),
               const SizedBox(height: 20),
@@ -67,14 +81,20 @@ class longPressPage extends StatelessWidget {
               ),
 
               // Add more images as needed
-              ClipRRect(
-                borderRadius:
-                    BorderRadius.circular(20.0), // Adjust the radius as needed
-                child: Image.asset(
-                  'assets/badminton.jpg', // Replace with your image URL
-                  width: 250.0, // Adjust the width as needed
-                  height: 250.0, // Adjust the height as needed
-                  fit: BoxFit.cover, // Choose the appropriate BoxFit
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/date', (route) => false);
+                },
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(
+                      20.0), // Adjust the radius as needed
+                  child: Image.asset(
+                    'assets/badminton.jpg', // Replace with your image URL
+                    width: 250.0, // Adjust the width as needed
+                    height: 250.0, // Adjust the height as needed
+                    fit: BoxFit.cover, // Choose the appropriate BoxFit
+                  ),
                 ),
               ),
 
