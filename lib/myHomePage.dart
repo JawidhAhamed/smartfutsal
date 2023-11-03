@@ -2,10 +2,12 @@
 import 'package:flutter/material.dart';
 import 'package:smartfutsal/Home%20Page/storePage.dart';
 import 'package:smartfutsal/homescreen.dart';
-import 'accountPage.dart';
+import 'package:smartfutsal/profile/profile/profile.dart';
 import 'homePage.dart';
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -15,9 +17,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final List<Widget> _pages = [
     HomePage(),
-    Homescreen(),
-    AccountPage(),
-    storePage()
+    const Homescreen(),
+    const Profile(),
+    const storePage()
   ];
 
   void _onTabTapped(int index) {
@@ -32,12 +34,13 @@ class _MyHomePageState extends State<MyHomePage> {
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.black,
+        type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
         onTap: _onTabTapped,
         selectedItemColor: const Color.fromARGB(
             255, 237, 213, 0), // Change the selected item color
-        unselectedItemColor: const Color.fromARGB(255, 0, 0, 0),
-        items: [
+        unselectedItemColor: Colors.white,
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
