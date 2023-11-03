@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
-import 'package:smartfutsal/homePage.dart';
+//import 'package:smartfutsal/homePage.dart';
 
-class getStarted extends StatelessWidget {
+class getStarted extends StatefulWidget {
   const getStarted({super.key});
 
+  @override
+  State<getStarted> createState() => _getStartedState();
+}
+
+class _getStartedState extends State<getStarted> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -37,19 +42,18 @@ class getStarted extends StatelessWidget {
 
           Container(
             width: screenWidth,
-            margin: EdgeInsets.fromLTRB(0, 80, 0, 0),
+            margin: const EdgeInsets.fromLTRB(0, 80, 0, 0),
             // width: 150,
             height: 60,
             child: Image.asset(
               'assets/logob.png',
             ),
           ),
-          Container(
-              child: Column(
+          Column(
             children: [
               Container(
-                margin: EdgeInsets.fromLTRB(0, 40, 0, 0),
-                child: Text(
+                margin: const EdgeInsets.fromLTRB(0, 40, 0, 0),
+                child: const Text(
                   'TO ENHANCE THE ',
                   style: TextStyle(
                       color: Colors.black,
@@ -57,19 +61,17 @@ class getStarted extends StatelessWidget {
                       fontWeight: FontWeight.w900),
                 ),
               ),
-              Container(
-                child: Text(
-                  'FUTSAL EXPERIENCE',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 25,
-                      fontWeight: FontWeight.w900),
-                ),
+              const Text(
+                'FUTSAL EXPERIENCE',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 25,
+                    fontWeight: FontWeight.w900),
               ),
             ],
-          )),
+          ),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 90, 0, 0),
+            margin: const EdgeInsets.fromLTRB(0, 90, 0, 0),
             height: 150,
             child: Image.asset(
               'assets/fplayer.png',
@@ -77,25 +79,22 @@ class getStarted extends StatelessWidget {
           ),
           Container(
             width: screenWidth,
-            margin: EdgeInsets.fromLTRB(0, 50, 0, 0),
+            margin: const EdgeInsets.fromLTRB(0, 50, 0, 0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
-                      );
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, '/login', (route) => false);
                     },
                     style: ElevatedButton.styleFrom(
-                      elevation: 10,
-                      minimumSize: Size(200, 50),
-                      backgroundColor: Color.fromARGB(
-                          255, 71, 124, 81), // Change the background color here
-                      onPrimary: Colors.white, // Change the text color here
+                      foregroundColor: Colors.white, elevation: 10,
+                      minimumSize: const Size(200, 50),
+                      backgroundColor: const Color.fromARGB(
+                          255, 71, 124, 81), // Change the text color here
                     ),
-                    child: Text('Get Started',
+                    child: const Text('Get Started',
                         style: TextStyle(
                             color: Color.fromARGB(255, 255, 255, 255),
                             fontWeight: FontWeight.bold)))

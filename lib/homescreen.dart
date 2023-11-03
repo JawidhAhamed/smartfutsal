@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 //import 'package:flutter_app/firstPage.dart';
 //import 'package:flutter_app/secondPage.dart';
@@ -124,7 +123,7 @@ class Homescreen extends StatelessWidget {
                           true, // Set to true if you want an infinite loop
                       viewportFraction: 0.8,
                       autoPlay: true,
-                      autoPlayInterval: const Duration(seconds: 3),
+                      autoPlayInterval: const Duration(seconds: 1),
                       initialPage: 1, // Adjust the interval between slides
 
                       // Display only one item at a time

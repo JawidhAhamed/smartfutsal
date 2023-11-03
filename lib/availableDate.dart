@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'homePage.dart';
 
-class cDate extends StatelessWidget {
+class cDate extends StatefulWidget {
+  @override
+  State<cDate> createState() => _cDateState();
+}
+
+class _cDateState extends State<cDate> {
   @override
   Widget build(BuildContext context) {
     // Taking the size of the screen
@@ -52,10 +57,8 @@ class cDate extends StatelessWidget {
                       elevation: MaterialStateProperty.all<double>(29.0),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
-                      );
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, '/time', (route) => false);
                     },
                     child: Text(
                       'SUN',
@@ -74,10 +77,8 @@ class cDate extends StatelessWidget {
                       elevation: MaterialStateProperty.all<double>(29.0),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
-                      );
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, '/time', (route) => false);
                     },
                     child: Text(
                       'MON',
@@ -96,10 +97,8 @@ class cDate extends StatelessWidget {
                       elevation: MaterialStateProperty.all<double>(29.0),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
-                      );
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, '/time', (route) => false);
                     },
                     child: Text(
                       'TUE',
@@ -124,10 +123,8 @@ class cDate extends StatelessWidget {
                       elevation: MaterialStateProperty.all<double>(29.0),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
-                      );
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, '/time', (route) => false);
                     },
                     child: Text(
                       'WED',
@@ -146,10 +143,8 @@ class cDate extends StatelessWidget {
                       elevation: MaterialStateProperty.all<double>(29.0),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
-                      );
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, '/time', (route) => false);
                     },
                     child: Text(
                       'THUR',
@@ -168,10 +163,8 @@ class cDate extends StatelessWidget {
                       elevation: MaterialStateProperty.all<double>(29.0),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
-                      );
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, '/time', (route) => false);
                     },
                     child: Text(
                       'FRI',
@@ -194,10 +187,8 @@ class cDate extends StatelessWidget {
                   elevation: MaterialStateProperty.all<double>(29.0),
                 ),
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => HomePage()),
-                  );
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/time', (route) => false);
                 },
                 child: Text(
                   'SAT',
