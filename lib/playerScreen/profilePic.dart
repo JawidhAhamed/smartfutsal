@@ -19,7 +19,7 @@ class ProfilePic extends StatelessWidget {
               const CircleAvatar(
                 radius: 10,
                 backgroundImage: AssetImage(
-                  'assets/profilep.jpg',
+                  'assets/prof.png',
                 ),
               ),
               Positioned(

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:smartfutsal/Home%20Page/getStarted.dart';
+import 'package:smartfutsal/mainScreen/getStarted.dart';
+import 'profile/profile.dart';
+import 'package:smartfutsal/playerScreen/constants.dart';
+import 'package:smartfutsal/playerScreen/homescreen.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -22,13 +25,21 @@ class HomePage extends StatelessWidget {
         children: [
           Row(
             children: [
-              Container(
-                width: (screenWidth / 5) - 20,
-                margin: EdgeInsets.fromLTRB(10, 40, 10, 0),
-                child: CircleAvatar(
-                  radius: 20,
-                  backgroundImage: AssetImage(
-                    'assets/profilep.jpg',
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => Profile(),
+                    ),
+                  );
+                },
+                child: Container(
+                  width: (screenWidth / 5) - 20,
+                  margin: EdgeInsets.fromLTRB(10, 40, 10, 0),
+                  child: CircleAvatar(
+                    radius: 20,
+                    backgroundImage: AssetImage(prfl),
                   ),
                 ),
               ),
@@ -113,7 +124,7 @@ class HomePage extends StatelessWidget {
                     child: const Text(
                       'News',
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 15, fontWeight: FontWeight.bold,
                         color: Color.fromARGB(
                             255, 0, 0, 0), // Customize text color
                       ),
@@ -128,7 +139,7 @@ class HomePage extends StatelessWidget {
                     child: Text(
                       'Live Score',
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 15, fontWeight: FontWeight.bold,
                         color: const Color.fromARGB(
                             255, 0, 0, 0), // Customize text color
                       ),
@@ -143,7 +154,7 @@ class HomePage extends StatelessWidget {
                     child: Text(
                       'Offers',
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 15, fontWeight: FontWeight.bold,
                         color: const Color.fromARGB(
                             255, 0, 0, 0), // Customize text color
                       ),
@@ -158,7 +169,7 @@ class HomePage extends StatelessWidget {
                     child: Text(
                       'More',
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 15, fontWeight: FontWeight.bold,
                         color: const Color.fromARGB(
                             255, 0, 0, 0), // Customize text color
                       ),
@@ -174,10 +185,10 @@ class HomePage extends StatelessWidget {
                 width: screenWidth - 40,
                 margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(
+                  gradient: const LinearGradient(
                     colors: [
-                      Color.fromARGB(255, 71, 124, 81),
-                      Color.fromARGB(255, 114, 192, 116)
+                      Color.fromRGBO(24, 24, 24, 1),
+                      Color.fromRGBO(24, 24, 24, 1),
                     ],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
@@ -219,10 +230,10 @@ class HomePage extends StatelessWidget {
                         width: screenWidth - 180,
                         margin: EdgeInsets.fromLTRB(0, 0, 20, 0),
                         decoration: BoxDecoration(
-                          gradient: LinearGradient(
+                          gradient: const LinearGradient(
                             colors: [
-                              Color.fromARGB(255, 255, 255, 255),
-                              Color.fromARGB(255, 184, 224, 185)
+                              Color.fromARGB(255, 243, 243, 243),
+                              Color.fromRGBO(24, 24, 24, 1),
                             ],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
@@ -248,69 +259,79 @@ class HomePage extends StatelessWidget {
             ],
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 100, 0, 0),
+            width: screenWidth - 40,
+            margin: EdgeInsets.fromLTRB(20, 20, 20, 0),
+            decoration: BoxDecoration(
+              gradient: const LinearGradient(
+                colors: [
+                  Color.fromRGBO(24, 24, 24, 1),
+                  Color.fromRGBO(24, 24, 24, 1),
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+              borderRadius: BorderRadius.circular(20),
+              color: Color.fromARGB(255, 71, 124, 81),
+              // border: Border.all(
+              //     color: Color.fromARGB(255, 71, 124, 81), width: 1),
+            ),
+            height: 250,
             child: Row(
               children: [
                 Container(
-                  margin: EdgeInsets.fromLTRB(35, 0, 10, 0),
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 71, 124, 81),
-                        Color.fromARGB(255, 114, 192, 116)
-                      ],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
-                    borderRadius: BorderRadius.circular(20),
-                    color: Color.fromARGB(255, 71, 124, 81),
-                    // border: Border.all(
-                    //     color: Color.fromARGB(255, 71, 124, 81), width: 1),
+                  padding: EdgeInsets.fromLTRB(40, 50, 0, 0),
+                  width: screenWidth / 2,
+                  margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                  child: Column(
+                    children: [
+                      Container(
+                          height: 60,
+                          padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                          child: Image.asset(
+                            'logo.png',
+                          )),
+                      Container(
+                        child: Text(
+                          'TO GRAB YOUR',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
+                        ),
+                      ),
+                      Container(
+                        child: Text(
+                          'TIME SLOT',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
+                        ),
+                      ),
+                      Container(
+                        width: screenWidth / 2,
+                        padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const Homescreen(),
+                              ),
+                            );
+                          },
+                          child: Image.asset('Booknowlogo.png'),
+                        ),
+                      )
+                    ],
                   ),
-                  width: (screenWidth / 3) - 50,
-                  height: 300,
-                  // child: Image.asset("assets/badminton.jpg")
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(25, 0, 25, 0),
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 71, 124, 81),
-                        Color.fromARGB(255, 114, 192, 116)
-                      ],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
-                    borderRadius: BorderRadius.circular(20),
-                    color: Color.fromARGB(255, 0, 0, 0),
-                    // border: Border.all(
-                    //     color: Color.fromARGB(255, 71, 124, 81), width: 1),
-                  ),
-                  width: (screenWidth / 3) - 50,
-                  height: 200,
-                  // child: Text("data", style: TextStyle(color: Colors.white)),
-                ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(10, 0, 35, 0),
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 71, 124, 81),
-                        Color.fromARGB(255, 114, 192, 116)
-                      ],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
-                    borderRadius: BorderRadius.circular(20),
-                    color: Color.fromARGB(255, 71, 124, 81),
-                    // border: Border.all(
-                    //     color: Color.fromARGB(255, 71, 124, 81), width: 1),
-                  ),
-                  width: (screenWidth / 3) - 50,
-                  height: 300,
-                  // child: Text("data", style: TextStyle(color: Colors.white)),
-                ),
+                    width: screenWidth / 2 - 40,
+                    padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    height: 300,
+                    child: Image.asset("Booknow.png")),
               ],
             ),
           ),

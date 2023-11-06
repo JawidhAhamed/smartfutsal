@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'profile.dart';
-import 'package:smartfutsal/constants.dart';
+import 'package:smartfutsal/playerScreen/constants.dart';
+import 'package:smartfutsal/playerScreen/details.dart';
 
 class Editprofile extends StatelessWidget {
   const Editprofile({super.key});
@@ -47,7 +48,7 @@ class Editprofile extends StatelessWidget {
                     width: 120,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(100),
-                      child: const Image(image: AssetImage(sith)),
+                      child: const Image(image: AssetImage(prfl)),
                     ),
                   ),
                   Positioned(
@@ -134,6 +135,36 @@ class Editprofile extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary:
+                        Color.fromARGB(255, 255, 255, 255), // Background color
+                    onPrimary: Colors.white, // Text color
+                    shadowColor:
+                        const Color.fromARGB(255, 16, 15, 15), // Shadow color
+                    elevation: 7, // Elevation (shadow)
+                    shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.circular(10.0), // Rounded corners
+                    ),
+                    padding: EdgeInsets.fromLTRB(
+                        0, 0, 0, 0), // Padding around the content
+                    minimumSize: Size(150.0, 50.0), // Minimum size
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DetailsPage()),
+                    );
+                  },
+                  child: Text('SAVE',
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 0, 0, 0),
+                        fontWeight: FontWeight.w900,
+                      ))),
             ),
           ],
         ),

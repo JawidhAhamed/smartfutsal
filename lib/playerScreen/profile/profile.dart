@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:smartfutsal/playerScreen/homePage.dart';
+import 'package:smartfutsal/playerScreen/profile/settingUi.dart';
 import 'editprofile.dart';
-import 'package:smartfutsal/constants.dart';
+import 'package:smartfutsal/playerScreen/constants.dart';
 import 'profilewidget.dart';
+import 'activityFeed.dart';
+import 'chat.dart';
 
 class Profile extends StatelessWidget {
   const Profile({Key? key}); // Use 'Key?' instead of 'super.key'
@@ -52,7 +56,7 @@ class Profile extends StatelessWidget {
                   width: 120,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(100),
-                    child: const Image(image: AssetImage(sithara)),
+                    child: Image.asset('prof.png'),
                   ),
                 ),
                 Positioned(
@@ -77,7 +81,7 @@ class Profile extends StatelessWidget {
             Container(
               margin: const EdgeInsets.fromLTRB(0, 10, 0, 0),
               child: const Text(
-                "HAMTHY",
+                "Team Futsal",
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
               ),
             ),
@@ -94,7 +98,7 @@ class Profile extends StatelessWidget {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 135, 165, 163),
+                  backgroundColor: const Color.fromRGBO(24, 24, 24, 1),
                   minimumSize: const Size(200, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
@@ -103,8 +107,8 @@ class Profile extends StatelessWidget {
                 child: const Text(
                   "Edit Profile",
                   style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    fontWeight: FontWeight.w100,
                   ),
                 ),
               ),
@@ -113,29 +117,81 @@ class Profile extends StatelessWidget {
               height: 40,
             ),
             const Divider(),
-            ProfileWidget(
-              icon: Icons.settings,
-              title: "Settings",
-              onPress: () {},
-              endIcon: true, // Set 'endIcon' to true
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) => SettingsPage(),
+                  ),
+                );
+              },
+              child: ProfileWidget(
+                icon: Icons.settings,
+                title: "Settings",
+                onPress: () {},
+                endIcon: true, // Set 'endIcon' to true
+              ),
             ),
-            ProfileWidget(
-              icon: Icons.chat_bubble,
-              title: "Chat",
-              onPress: () {},
-              endIcon: true, // Set 'endIcon' to true
+            SizedBox(
+              height: 7,
             ),
-            ProfileWidget(
-              icon: Icons.local_offer_rounded,
-              title: "Futsal Promotions",
-              onPress: () {},
-              endIcon: true, // Set 'endIcon' to true
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) => ChatBox(),
+                  ),
+                );
+              },
+              child: ProfileWidget(
+                icon: Icons.chat_bubble,
+                title: "Chat",
+                onPress: () {},
+                endIcon: true, // Set 'endIcon' to true
+              ),
             ),
-            ProfileWidget(
-              icon: Icons.settings,
-              title: "Settings",
-              onPress: () {},
-              endIcon: true, // Set 'endIcon' to true
+            SizedBox(
+              height: 7,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) => ChatBox(),
+                  ),
+                );
+              },
+              child: ProfileWidget(
+                icon: Icons.local_offer_rounded,
+                title: "Futsal Promotions",
+                onPress: () {},
+                endIcon: true, // Set 'endIcon' to true
+              ),
+            ),
+            SizedBox(
+              height: 7,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) => ActivityFeed(),
+                  ),
+                );
+              },
+              child: ProfileWidget(
+                icon: Icons.local_activity,
+                title: "Activity",
+                onPress: () {},
+                endIcon: true, // Set 'endIcon' to true
+              ),
+            ),
+            SizedBox(
+              height: 7,
             ),
             ProfileWidget(
               icon: Icons.logout_outlined,

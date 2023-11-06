@@ -15,6 +15,7 @@ class _getStartedState extends State<getStarted> {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: Color.fromRGBO(24, 24, 24, 1),
       body: Column(
         // mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -39,14 +40,20 @@ class _getStartedState extends State<getStarted> {
           // ),
 
           // Your Content
+          // mage.asset(
+          //   'Iassets/background_image.jpg', // Replace with the actual image path
+          //   fit: BoxFit.finity,
+          //   height: double.incover, // You can adjust the fit as needed
+          //   width: double.infinity,
+          // ),
 
           Container(
             width: screenWidth,
-            margin: const EdgeInsets.fromLTRB(0, 80, 0, 0),
+            margin: const EdgeInsets.fromLTRB(0, 150, 0, 0),
             // width: 150,
             height: 60,
             child: Image.asset(
-              'assets/logob.png',
+              'assets/logo.png',
             ),
           ),
           Column(
@@ -56,7 +63,7 @@ class _getStartedState extends State<getStarted> {
                 child: const Text(
                   'TO ENHANCE THE ',
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Color.fromARGB(255, 255, 255, 255),
                       fontSize: 35,
                       fontWeight: FontWeight.w900),
                 ),
@@ -64,7 +71,7 @@ class _getStartedState extends State<getStarted> {
               const Text(
                 'FUTSAL EXPERIENCE',
                 style: TextStyle(
-                    color: Colors.black,
+                    color: Color.fromARGB(255, 255, 255, 255),
                     fontSize: 25,
                     fontWeight: FontWeight.w900),
               ),
@@ -86,17 +93,17 @@ class _getStartedState extends State<getStarted> {
                 ElevatedButton(
                     onPressed: () {
                       Navigator.pushNamedAndRemoveUntil(
-                          context, '/login', (route) => false);
+                          context, '/userHome', (route) => false);
                     },
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.white, elevation: 10,
                       minimumSize: const Size(200, 50),
-                      backgroundColor: const Color.fromARGB(
-                          255, 71, 124, 81), // Change the text color here
+                      backgroundColor: Color.fromARGB(
+                          255, 255, 255, 255), // Change the text color here
                     ),
                     child: const Text('Get Started',
                         style: TextStyle(
-                            color: Color.fromARGB(255, 255, 255, 255),
+                            color: Color.fromARGB(255, 0, 0, 0),
                             fontWeight: FontWeight.bold)))
               ],
             ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
-import 'constants.dart';
-import 'birthdatescreen.dart';
+import '../playerScreen/constants.dart';
+import '../playerScreen/birthdatescreen.dart';
 import 'signin.dart';
 import 'package:http/http.dart' as http;
 import 'package:quickalert/quickalert.dart';

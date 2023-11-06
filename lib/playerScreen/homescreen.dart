@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 //import 'package:flutter_app/firstPage.dart';
 //import 'package:flutter_app/secondPage.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:smartfutsal/longPressPage.dart';
+import 'package:smartfutsal/playerScreen/longPressPage.dart';
 
 //import 'package:device_preview/device_preview.dart';
 
@@ -43,7 +43,7 @@ class Homescreen extends StatelessWidget {
                 children: [
                   Container(
                     child: AppBar(
-                      backgroundColor: Colors.black.withOpacity(0),
+                      backgroundColor: Color.fromRGBO(24, 24, 24, 1),
                       title: const Text('Futsal Courts'),
                       leading: Padding(
                         padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
