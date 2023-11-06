@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 //import 'package:smartfutsal/Home%20Page/getStarted.dart';
 //import 'package:smartfutsal/myHomePage.dart';
 import 'package:device_preview/device_preview.dart';
-import 'package:smartfutsal/mainScreen/getStarted.dart';
+//import 'package:smartfutsal/mainScreen/getStarted.dart';
+import 'package:smartfutsal/mainScreen/onboding_screen.dart';
 import 'package:smartfutsal/playerScreen/details.dart';
 import 'package:smartfutsal/playerScreen/homePage.dart';
 import 'package:smartfutsal/playerScreen/storePage.dart';
@@ -33,15 +34,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Futsal',
       theme: ThemeData(
-        scaffoldBackgroundColor: Color.fromARGB(
+        scaffoldBackgroundColor: const Color.fromARGB(
             255, 255, 255, 255), // Setting the global background color
       ),
       //home: MyHomePage(),
       //home: const SplashScreen(),
-      initialRoute: '/',
+      initialRoute: '/userHome',
       routes: {
-        '/': (context) => getStarted(),
-        // '/start': (context) => const getStarted(),
+        '/': (context) => const SplashScreen(),
+        '/start': (context) => const OnbodingScreen(),
         '/login': (context) => const Signin(),
         '/register': (context) => const SignUp(),
         '/userHome': (context) => const MyHomePage(),

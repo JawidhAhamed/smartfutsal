@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import '../playerScreen/constants.dart';
 //import 'signin.dart';
-import './getStarted.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
