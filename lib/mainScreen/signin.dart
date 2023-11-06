@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smartfutsal/playerScreen/forgot%20password.dart';
 //import 'package:smartfutsal/homePage.dart';
 import 'package:smartfutsal/playerScreen/myHomePage.dart';
 import 'dart:convert';
@@ -221,7 +222,13 @@ class _SigninState extends State<Signin> {
                           padding: EdgeInsets.fromLTRB(80, 5, 0, 0),
                         ),
                         GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => Forgotpassword(),
+                                ),
+                              );
+                            },
                             child: Text(
                               "Forget password",
                               style:
