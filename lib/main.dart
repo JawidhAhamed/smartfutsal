@@ -39,15 +39,15 @@ class MyApp extends StatelessWidget {
       ),
       //home: MyHomePage(),
       //home: const SplashScreen(),
-      initialRoute: '/userHome',
+      initialRoute: '/login',
       routes: {
-        '/': (context) => const SplashScreen(),
-        '/start': (context) => const OnbodingScreen(),
-        '/login': (context) => const Signin(),
-        '/register': (context) => const SignUp(),
-        '/userHome': (context) => const MyHomePage(),
-        '/date': (context) => cDate(),
-        '/time': (context) => const ChooseTime(),
+        '/': (context) => const Signin(),
+        // '/start': (context) => const OnbodingScreen(),
+        // '/login': (context) => const Signin(),
+        // '/register': (context) => const SignUp(),
+        // '/userHome': (context) => const MyHomePage(),
+        // '/date': (context) => cDate(),
+        // '/time': (context) => const ChooseTime(),
       },
     );
   }
