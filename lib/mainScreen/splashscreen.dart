@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'constants.dart';
+import '../playerScreen/constants.dart';
 //import 'signin.dart';
-import 'Home Page/getStarted.dart';
+import './getStarted.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -30,15 +30,16 @@ class SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Image(
-              image: AssetImage(logo1),
+              image: AssetImage(logob),
               width: 250,
             ),
             Container(
-                margin: const EdgeInsets.fromLTRB(0, 10, 0, 0),
-                child: const SpinKitSpinningLines(
-                  color: Color.fromARGB(255, 6, 1, 1),
-                  size: 50.0,
-                ))
+              margin: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+              child: const SpinKitSpinningLines(
+                color: Color.fromARGB(255, 6, 1, 1),
+                size: 50.0,
+              ),
+            )
           ],
         ),
       ),

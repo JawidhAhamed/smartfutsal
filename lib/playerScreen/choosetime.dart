@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
+import 'package:smartfutsal/playerScreen/details.dart';
 
 class ChooseTime extends StatelessWidget {
   //stl (short)
@@ -8,12 +9,12 @@ class ChooseTime extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double scrWidth = MediaQuery.of(context).size.width;
-   // double scrHeight = MediaQuery.of(context).size.height;
+    // double scrHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color.fromRGBO(24, 24, 24, 1),
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Color.fromRGBO(24, 24, 24, 1),
         leading: Padding(
           padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
           child: Image.asset(
@@ -48,7 +49,13 @@ class ChooseTime extends StatelessWidget {
                   Container(
                     margin: const EdgeInsets.fromLTRB(9, 5, 4.5, 5),
                     child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => DetailsPage()),
+                          );
+                        },
                         style: ElevatedButton.styleFrom(
                           padding: const EdgeInsets.all(10),
                           backgroundColor: Colors.white,
@@ -112,7 +119,7 @@ class ChooseTime extends StatelessWidget {
                     child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          padding:  const EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(10),
                           backgroundColor: Colors.white,
                           minimumSize: Size((scrWidth / 3) - 12, 50),
                           maximumSize: Size((scrWidth / 3) - 12, 50),
@@ -140,7 +147,7 @@ class ChooseTime extends StatelessWidget {
                   ),
                 ],
               ),
-               const SizedBox(height: 5),
+              const SizedBox(height: 5),
               Row(
                 children: <Widget>[
                   Container(
@@ -210,7 +217,7 @@ class ChooseTime extends StatelessWidget {
                     child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          padding:  const EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(10),
                           backgroundColor: Colors.white,
                           minimumSize: Size((scrWidth / 3) - 12, 50),
                           maximumSize: Size((scrWidth / 3) - 12, 50),
@@ -238,7 +245,7 @@ class ChooseTime extends StatelessWidget {
                   ),
                 ],
               ),
-               const SizedBox(height: 5),
+              const SizedBox(height: 5),
               Row(
                 children: <Widget>[
                   Container(
@@ -308,7 +315,7 @@ class ChooseTime extends StatelessWidget {
                     child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          padding:  const EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(10),
                           backgroundColor: Colors.white,
                           minimumSize: Size((scrWidth / 3) - 12, 50),
                           maximumSize: Size((scrWidth / 3) - 12, 50),
@@ -336,7 +343,7 @@ class ChooseTime extends StatelessWidget {
                   ),
                 ],
               ),
-               const SizedBox(height: 5),
+              const SizedBox(height: 5),
               Row(
                 children: <Widget>[
                   Container(
@@ -406,7 +413,7 @@ class ChooseTime extends StatelessWidget {
                     child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          padding:  const EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(10),
                           backgroundColor: Colors.white,
                           minimumSize: Size((scrWidth / 3) - 12, 50),
                           maximumSize: Size((scrWidth / 3) - 12, 50),
@@ -434,7 +441,7 @@ class ChooseTime extends StatelessWidget {
                   ),
                 ],
               ),
-               const SizedBox(height: 5),
+              const SizedBox(height: 5),
               Row(
                 children: <Widget>[
                   Container(
@@ -504,7 +511,7 @@ class ChooseTime extends StatelessWidget {
                     child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          padding:  const EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(10),
                           backgroundColor: Colors.white,
                           minimumSize: Size((scrWidth / 3) - 12, 50),
                           maximumSize: Size((scrWidth / 3) - 12, 50),
@@ -532,7 +539,7 @@ class ChooseTime extends StatelessWidget {
                   ),
                 ],
               ),
-               const SizedBox(height: 5),
+              const SizedBox(height: 5),
               Row(
                 children: <Widget>[
                   Container(
@@ -602,7 +609,7 @@ class ChooseTime extends StatelessWidget {
                     child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          padding:  const EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(10),
                           backgroundColor: Colors.white,
                           minimumSize: Size((scrWidth / 3) - 12, 50),
                           maximumSize: Size((scrWidth / 3) - 12, 50),
@@ -630,39 +637,38 @@ class ChooseTime extends StatelessWidget {
                   ),
                 ],
               ),
-                const SizedBox(height: 5)  ,
-                 Container(
-                    margin: const EdgeInsets.fromLTRB(4.5, 5, 4.5, 5),
-                    child: ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          padding: const EdgeInsets.all(10),
-                          backgroundColor: Colors.white,
-                          minimumSize: Size((scrWidth / 3)-12 , 50),
-                          maximumSize: Size((scrWidth / 3)-12, 50),
-                          shape: const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(
-                                Radius.circular(05)), // Button border radius
-                          ),
-                        ),
-                        child: const Column(children: <Widget>[
-                          Text(
-                            "9:00 PM",
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            av,
-                            style: TextStyle(
-                                color: Colors.green,
-                                fontSize: 10,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ])),
-                  ),
-                  
+              const SizedBox(height: 5),
+              Container(
+                margin: const EdgeInsets.fromLTRB(4.5, 5, 4.5, 5),
+                child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      padding: const EdgeInsets.all(10),
+                      backgroundColor: Colors.white,
+                      minimumSize: Size((scrWidth / 3) - 12, 50),
+                      maximumSize: Size((scrWidth / 3) - 12, 50),
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(
+                            Radius.circular(05)), // Button border radius
+                      ),
+                    ),
+                    child: const Column(children: <Widget>[
+                      Text(
+                        "9:00 PM",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        av,
+                        style: TextStyle(
+                            color: Colors.green,
+                            fontSize: 10,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ])),
+              ),
             ],
           ),
         ),

@@ -12,6 +12,7 @@ class _cDateState extends State<cDate> {
     // Taking the size of the screen
     // double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+        backgroundColor: Color.fromRGBO(3, 5, 21, 1),
         appBar: AppBar(
             title: Text('Available Date'),
             backgroundColor: Color.fromRGBO(3, 5, 21, 1),
@@ -32,7 +33,7 @@ class _cDateState extends State<cDate> {
                 height: 30,
               ),
               Container(
-                margin: EdgeInsets.fromLTRB(100, 0, 0, 0),
+                margin: EdgeInsets.fromLTRB(100, 100, 0, 0),
                 child: Row(children: <Widget>[
                   Text(
                     "AVAILABLE DATE",
@@ -179,25 +180,28 @@ class _cDateState extends State<cDate> {
               SizedBox(
                 height: 15,
               ),
-              ElevatedButton(
-                style: ButtonStyle(
-                  minimumSize: MaterialStatePropertyAll(Size(50, 50)),
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                      Color.fromARGB(255, 255, 255, 255)),
-                  elevation: MaterialStateProperty.all<double>(29.0),
-                ),
-                onPressed: () {
-                  Navigator.pushNamedAndRemoveUntil(
-                      context, '/time', (route) => false);
-                },
-                child: Text(
-                  'SAT',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w900,
-                      fontSize: 20,
-                      fontFamily: 'SourceSans3-VariableFont_wght'),
-                ),
+              Row(
+                children: [
+                  ElevatedButton(
+                    style: ButtonStyle(
+                      minimumSize: MaterialStatePropertyAll(Size(100, 100)),
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          Color.fromARGB(255, 255, 255, 255)),
+                      elevation: MaterialStateProperty.all<double>(29.0),
+                    ),
+                    onPressed: () {
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, '/time', (route) => false);
+                    },
+                    child: Text(
+                      'SAT',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w900,
+                          fontSize: 20),
+                    ),
+                  ),
+                ],
               ),
               SizedBox(width: 20),
             ],

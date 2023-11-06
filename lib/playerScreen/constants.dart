@@ -11,4 +11,8 @@ const String bo = "BOOKING";
 const String sith = "assets/ham.jpg";
 const String logo1 = "assets/logo1.png";
 const String sithara = "assets/s1.jpg";
-
+const String logob = "assets/logob.png";
+const String stad1 = "assets/stad1.jpg";
+const String stad2 = "assets/stad2.jpg";
+const String stad3 = "assets/stad2.jpg";
+const String prfl = "assets/prof.png";

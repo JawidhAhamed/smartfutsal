@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 //import 'package:smartfutsal/homePage.dart';
-import 'package:smartfutsal/myHomePage.dart';
+import 'package:smartfutsal/playerScreen/myHomePage.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:quickalert/quickalert.dart';
 //import 'splashscreen.dart';
-import 'constants.dart';
+import '../playerScreen/constants.dart';
 import 'signup.dart';
 
 class Signin extends StatefulWidget {

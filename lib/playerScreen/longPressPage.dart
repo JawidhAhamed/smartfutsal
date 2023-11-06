@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smartfutsal/availableDate.dart';
+import 'package:smartfutsal/playerScreen/availableDate.dart';
 import 'availableDate.dart';
 
 class longPressPage extends StatelessWidget {
@@ -8,8 +8,9 @@ class longPressPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 34, 34, 8),
+      backgroundColor: Color.fromRGBO(24, 24, 24, 1),
       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(24, 24, 24, 1),
         title: const Text('Futsal Courts'),
       ),
       body: Center(

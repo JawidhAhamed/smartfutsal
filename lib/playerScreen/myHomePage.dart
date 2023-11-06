@@ -1,8 +1,8 @@
 // lib/main.dart
 import 'package:flutter/material.dart';
-import 'package:smartfutsal/Home%20Page/storePage.dart';
-import 'package:smartfutsal/homescreen.dart';
-import 'package:smartfutsal/profile/profile/profile.dart';
+import 'package:smartfutsal/playerScreen/storePage.dart';
+import 'package:smartfutsal/playerScreen/homescreen.dart';
+import 'package:smartfutsal/playerScreen/profile/profile.dart';
 import 'homePage.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Color.fromRGBO(24, 24, 24, 1),
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
         onTap: _onTabTapped,
@@ -43,19 +43,19 @@ class _MyHomePageState extends State<MyHomePage> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.book_online),
-            label: 'Court',
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_circle),
-            label: 'Account',
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.store_rounded),
-            label: 'storePage',
+            label: '',
           ),
         ],
       ),
