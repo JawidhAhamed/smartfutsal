@@ -110,15 +110,15 @@ class _SigninState extends State<Signin> {
               child: Container(
                   width: wi,
                   height: hi,
-                  decoration:  const BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage("assets/cr7ff 1.png"),
                         fit: BoxFit.cover),
                   ),
-                  child: Center(
-                      child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
+                  // child: Center(
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
                         const Text(
                           log,
                           style: TextStyle(
@@ -217,7 +217,17 @@ class _SigninState extends State<Signin> {
                                         : Icons.visibility_off),
                                   )),
                             )),
-                        const SizedBox(height: 20),
+                        Container(
+                          padding: EdgeInsets.fromLTRB(80, 5, 0, 0),
+                        ),
+                        GestureDetector(
+                            onTap: () {},
+                            child: Text(
+                              "Forget password",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 14),
+                            )),
+                        SizedBox(height: 20),
                         ElevatedButton(
                           onPressed: () {
                             if (formkey.currentState!.validate()) {
@@ -269,12 +279,14 @@ class _SigninState extends State<Signin> {
                                 child: const Text("Sign Up",
                                     style: TextStyle(
                                       fontSize: 14,
-                                      color: Color.fromARGB(255, 146, 170, 189),
+                                      color: Colors.yellow,
                                       fontWeight: FontWeight.bold,
                                     )),
                               )
                             ])
-                      ]))),
+                      ])
+                  //)
+                  ),
             ),
           ),
         ));

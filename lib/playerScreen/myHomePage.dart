@@ -19,7 +19,7 @@ class _MyHomePageState extends State<MyHomePage> {
     HomePage(),
     const Homescreen(),
     const Profile(),
-    const storePage()
+    StorePage()
   ];
 
   void _onTabTapped(int index) {
