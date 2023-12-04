@@ -12,6 +12,9 @@ class Homescreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
         body: SingleChildScrollView(
       child: Column(
@@ -27,6 +30,8 @@ class Homescreen extends StatelessWidget {
                 ),
                 child: Image.asset(
                   'assets/stad1.jpg',
+                  height: screenHeight + 100,
+                  width: screenWidth + 100,
                 ),
               ),
               // BackdropFilter(

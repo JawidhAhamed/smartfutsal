@@ -198,7 +198,7 @@ class Profile extends StatelessWidget {
               title: "Logout",
               onPress: () {
                 Navigator.pushNamedAndRemoveUntil(
-                    context, '/login', (route) => false);
+                    context, '/logout', (route) => false);
               },
               endIcon: true,
               textColor: Colors.red, // Set text color to red

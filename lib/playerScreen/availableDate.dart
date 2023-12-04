@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smartfutsal/playerScreen/choosetime.dart';
 import 'homePage.dart';
 
 class cDate extends StatefulWidget {
@@ -58,8 +59,12 @@ class _cDateState extends State<cDate> {
                       elevation: MaterialStateProperty.all<double>(29.0),
                     ),
                     onPressed: () {
-                      Navigator.pushNamedAndRemoveUntil(
-                          context, '/time', (route) => false);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => ChooseTime(),
+                        ),
+                      );
                     },
                     child: Text(
                       'SUN',
@@ -78,8 +83,12 @@ class _cDateState extends State<cDate> {
                       elevation: MaterialStateProperty.all<double>(29.0),
                     ),
                     onPressed: () {
-                      Navigator.pushNamedAndRemoveUntil(
-                          context, '/time', (route) => false);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => ChooseTime(),
+                        ),
+                      );
                     },
                     child: Text(
                       'MON',
@@ -98,8 +107,12 @@ class _cDateState extends State<cDate> {
                       elevation: MaterialStateProperty.all<double>(29.0),
                     ),
                     onPressed: () {
-                      Navigator.pushNamedAndRemoveUntil(
-                          context, '/time', (route) => false);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => ChooseTime(),
+                        ),
+                      );
                     },
                     child: Text(
                       'TUE',
@@ -124,8 +137,12 @@ class _cDateState extends State<cDate> {
                       elevation: MaterialStateProperty.all<double>(29.0),
                     ),
                     onPressed: () {
-                      Navigator.pushNamedAndRemoveUntil(
-                          context, '/time', (route) => false);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => ChooseTime(),
+                        ),
+                      );
                     },
                     child: Text(
                       'WED',
@@ -144,8 +161,12 @@ class _cDateState extends State<cDate> {
                       elevation: MaterialStateProperty.all<double>(29.0),
                     ),
                     onPressed: () {
-                      Navigator.pushNamedAndRemoveUntil(
-                          context, '/time', (route) => false);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => ChooseTime(),
+                        ),
+                      );
                     },
                     child: Text(
                       'THUR',
@@ -164,8 +185,12 @@ class _cDateState extends State<cDate> {
                       elevation: MaterialStateProperty.all<double>(29.0),
                     ),
                     onPressed: () {
-                      Navigator.pushNamedAndRemoveUntil(
-                          context, '/time', (route) => false);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => ChooseTime(),
+                        ),
+                      );
                     },
                     child: Text(
                       'FRI',
@@ -190,8 +215,12 @@ class _cDateState extends State<cDate> {
                       elevation: MaterialStateProperty.all<double>(29.0),
                     ),
                     onPressed: () {
-                      Navigator.pushNamedAndRemoveUntil(
-                          context, '/time', (route) => false);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => ChooseTime(),
+                        ),
+                      );
                     },
                     child: Text(
                       'SAT',

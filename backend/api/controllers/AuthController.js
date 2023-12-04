@@ -58,6 +58,7 @@ exports.loginUser = (req, res) => {
                 data: {
                   token: token,
                   role: user.role,
+                  email:user.email,
                 },
               });
             }

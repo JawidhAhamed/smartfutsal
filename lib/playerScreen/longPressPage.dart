@@ -23,8 +23,12 @@ class longPressPage extends StatelessWidget {
               SizedBox(height: 20),
               GestureDetector(
                 onTap: () {
-                  Navigator.pushNamedAndRemoveUntil(
-                      context, '/date', (route) => false);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => cDate(),
+                    ),
+                  );
                 },
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(
@@ -55,8 +59,12 @@ class longPressPage extends StatelessWidget {
               // Second Image
               GestureDetector(
                 onTap: () {
-                  Navigator.pushNamedAndRemoveUntil(
-                      context, '/date', (route) => false);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => cDate(),
+                    ),
+                  );
                 },
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(
@@ -84,8 +92,12 @@ class longPressPage extends StatelessWidget {
               // Add more images as needed
               GestureDetector(
                 onTap: () {
-                  Navigator.pushNamedAndRemoveUntil(
-                      context, '/date', (route) => false);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => cDate(),
+                    ),
+                  );
                 },
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(

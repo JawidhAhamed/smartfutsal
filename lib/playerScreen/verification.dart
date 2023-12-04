@@ -9,9 +9,10 @@ class Verification extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color.fromRGBO(24, 24, 24, 1),
         title: Text('Forgot Password'),
       ),
-      backgroundColor: Color.fromARGB(255, 1, 48, 92),
+      backgroundColor: Color.fromRGBO(24, 24, 24, 1),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Center(
@@ -19,15 +20,15 @@ class Verification extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                'assets/password.jpg', // Replace with the actual image path
-                width: 1800, // Adjust the width as needed
-                height: 200, // Adjust the height as needed
+                'research.png', // Replace with the actual image path
+                width: 150, // Adjust the width as needed
+                height: 150, // Adjust the height as needed
               ),
               SizedBox(
                 height: 20,
               ),
               Text(
-                "CHECK IN YOUR MAIL?",
+                "CHECK IN YOUR MAIL!",
                 style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
@@ -55,6 +56,7 @@ class Verification extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
                   minimumSize: Size(300, 70),
                   padding: EdgeInsets.all(20),
                   shape: RoundedRectangleBorder(
@@ -64,6 +66,7 @@ class Verification extends StatelessWidget {
                 child: Text(
                   'DONE',
                   style: TextStyle(
+                    color: Color.fromRGBO(24, 24, 24, 1),
                     fontSize: 20,
                   ),
                 ),

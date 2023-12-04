@@ -5,12 +5,12 @@ import 'package:smartfutsal/playerScreen/myHomePage.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:quickalert/quickalert.dart';
+import 'package:smartfutsal/services/auth_services.dart';
 //import 'splashscreen.dart';
 import '../playerScreen/constants.dart';
 import 'signup.dart';
 
 class Signin extends StatefulWidget {
-  //stl(short)
   const Signin({super.key});
 
   @override
@@ -18,6 +18,7 @@ class Signin extends StatefulWidget {
 }
 
 class _SigninState extends State<Signin> {
+  final AuthService _authService = AuthService();
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
   String? _email;
   String? _password;
@@ -42,11 +43,23 @@ class _SigninState extends State<Signin> {
       if (response.statusCode == 200) {
         print('Login successfully');
         print(response.body);
+        final Map<String, dynamic> responseBody = json.decode(response.body);
+        final String token = responseBody['data']['token'];
+        final String role = responseBody['data']['role'];
+        final String email = responseBody['data']['email'];
+        await _authService.saveToken(token);
+        await _authService.saveRole(role);
+        await _authService.saveEmail(email);
+
         LoginConfirm();
-        Future.delayed(const Duration(seconds: 1), () {
-          Navigator.pushNamedAndRemoveUntil(
-              context, '/userHome', (route) => false);
-        });
+        if (role == "player") {
+          Future.delayed(const Duration(seconds: 1), () {
+            Navigator.pushNamedAndRemoveUntil(
+                context, '/userHome', (route) => false);
+          });
+        } else {
+          print("Invalid username password");
+        }
       } else {
         print('Failed to send POST request ${response.statusCode}');
         LoginError();
