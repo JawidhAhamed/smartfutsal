@@ -18,10 +18,10 @@ class Forgotpassword extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Color.fromRGBO(24, 24, 24, 1),
         title: Text('Forgot Password'),
       ),
-      backgroundColor: Color.fromARGB(255, 1, 48, 92),
+      backgroundColor: Color.fromRGBO(24, 24, 24, 1),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Center(
@@ -29,9 +29,9 @@ class Forgotpassword extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                'assets/password.jpg', // Replace with the actual image path
-                width: 1800, // Adjust the width as needed
-                height: 200, // Adjust the height as needed
+                'confusion.png', // Replace with the actual image path
+                width: 150, // Adjust the width as needed
+                height: 150, // Adjust the height as needed
               ),
               SizedBox(
                 height: 20,
@@ -56,10 +56,25 @@ class Forgotpassword extends StatelessWidget {
               ),
               SizedBox(height: 45.0),
               TextFormField(
+                style: TextStyle(
+                  color: const Color.fromARGB(255, 255, 255, 255),
+                  fontSize: 18.0,
+                ),
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                   labelText: 'Email',
+                  labelStyle: TextStyle(
+                    color: Colors.grey
+                        .withOpacity(0.8), // Change the hint text color
+                    // Change the font style of the hint text
+                    fontSize: 16.0, // Change the font size of the hint text
+                  ),
                   hintText: 'you@example.com',
+                  hintStyle: TextStyle(
+                    color: Colors.grey.withOpacity(0.5),
+                    fontStyle: FontStyle.italic,
+                    fontSize: 16.0,
+                  ),
                 ),
               ),
               SizedBox(height: 120.0),
@@ -68,6 +83,7 @@ class Forgotpassword extends StatelessWidget {
                   _navigateToVerification(context);
                 },
                 style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
                   minimumSize: Size(300, 70),
                   padding: EdgeInsets.all(20),
                   shape: RoundedRectangleBorder(
@@ -77,6 +93,8 @@ class Forgotpassword extends StatelessWidget {
                 child: Text(
                   'Send',
                   style: TextStyle(
+                    color: Color.fromRGBO(24, 24, 24, 1),
+                    fontWeight: FontWeight.bold,
                     fontSize: 20,
                   ),
                 ),

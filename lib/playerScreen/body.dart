@@ -7,13 +7,13 @@ class Body extends StatelessWidget {
     return Column(
       children: <Widget>[
         ProfilePic(),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         IconButton(
           onPressed: () {},
 
-          icon: Icon(Icons.star), // Icon to display
+          icon: const Icon(Icons.star), // Icon to display
           color: Colors.blue, // Color of the icon
           iconSize: 20.0, // Size of the icon
         ),

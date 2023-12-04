@@ -21,12 +21,6 @@ version: 1.0.0+1
 environment:
   sdk: ">=3.1.2 <4.0.0"
 
-# Dependencies specify other packages that your package needs in order to work.
-# To automatically upgrade your package dependencies to the latest versions
-# consider running `flutter pub upgrade --major-versions`. Alternatively,
-# dependencies can be manually updated by changing the version numbers below to
-# the latest version available on pub.dev. To see which dependencies have newer
-# versions available, run `flutter pub outdated`.
 dependencies:
   flutter:
     sdk: flutter
@@ -114,6 +108,7 @@ flutter:
     - assets/icons/
     - assets/RiveAssets/
     - assets/password.jpg
+    - assets/confusion.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

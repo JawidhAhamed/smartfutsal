@@ -1,4 +1,5 @@
-const app = require("express")();
+const express = require("express");
+const app=express();
 const cors = require("cors");
 require("dotenv").config();
 const bodyParser = require("body-parser");
@@ -14,6 +15,7 @@ DbConnection();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
+app.use('/uploads', express.static('uploads'));
 
 var v1 = require("./api/routes");
 
