@@ -6,6 +6,7 @@ router.get("/", function (req, res) {
 });
 
 require("./AuthRoutes")(router);
+require('./PlayerRoutes')(router);
 // require('./UserRoutes')(router);
 
 module.exports.router = router;

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'longPressPage.dart';
+import 'package:smartfutsal/playerScreen/store/bootnshoes.dart';
+import 'package:smartfutsal/playerScreen/store/equipments.dart';
+import '../longPressPage.dart';
 
 class StorePage extends StatelessWidget {
   const StorePage({Key? key}) : super(key: key);
@@ -53,12 +55,12 @@ class StorePage extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (BuildContext context) => const Carousel(),
-                    //   ),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => const Equipments(),
+                      ),
+                    );
                   },
                   child: Container(
                     width: screenWidth / 3 - 10,
@@ -66,10 +68,20 @@ class StorePage extends StatelessWidget {
                     child: Image.asset('assets/equipments.png'),
                   ),
                 ),
-                Container(
-                  width: screenWidth / 3 - 10,
-                  margin: EdgeInsets.fromLTRB(5, 20, 0, 0),
-                  child: Image.asset('assets/boots.png'),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => const Bootsnshoes(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: screenWidth / 3 - 10,
+                    margin: EdgeInsets.fromLTRB(10, 20, 0, 0),
+                    child: Image.asset('assets/boots.png'),
+                  ),
                 ),
                 Container(
                   width: screenWidth / 3 - 10,
